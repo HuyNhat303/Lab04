@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #212529;
+            --secondary-color: #6c757d;
+            --background-color: #ffffff;
+            --text-color: #212529;
+            --border-color: #dee2e6;
+            --card-bg: #f8f9fa;
+            --highlight-color: #0d6efd;
+        }
+
+        [data-bs-theme="dark"] {
+            --primary-color: #f8f9fa;
+            --secondary-color: #adb5bd;
+            --background-color: #212529;
+            --text-color: #f8f9fa;
+            --border-color: #495057;
+            --card-bg: #343a40;
+            --highlight-color: #0d6efd;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .card, .list-group-item {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .border-custom {
+            border-color: var(--border-color) !important;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            display: inline-block;
+        }
+
+        .review-card {
+            border-radius: 15px;
+            height: 100%;
+        }
+
+        .review-author {
+            color: var(--secondary-color);
+        }
+
+        .section-title {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="auto">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo me-2"></div>
+                your name
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn nav-link theme-toggle">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="container py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4">Frontend Developer</h1>
+                <p class="lead">Bootstrap portfolio with responsive design and dark mode</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container py-4">
+        <h2 class="section-title">Projects</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML Only Portfolio</h5>
+                        <p class="card-text">A simple portfolio website built with HTML only.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Calculator</h5>
+                        <p class="card-text">A JavaScript calculator with basic operations.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Quiz App</h5>
+                        <p class="card-text">An interactive quiz application with multiple-choice questions.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Countdown Timer</h5>
+                        <p class="card-text">A countdown timer for events and deadlines.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Upcoming Page</h5>
+                        <p class="card-text">A landing page for upcoming product releases.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="container py-4">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">roadmap.sh</h5>
+                        <p class="card-text">Solved all the frontend projects</p>
+                        <a href="#" class="btn btn-outline-primary">Visit my Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">OpenSource Work</h5>
+                        <p class="card-text">Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                        <a href="#" class="btn btn-outline-primary">Visit my GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container py-4">
+        <h2 class="section-title">Education</h2>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Academic Achievements</h5>
+                <p class="card-text">Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+            </div>
+        </div>
+        <h5>Courses I took:</h5>
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Object Oriented Programming</li>
+                    <li class="list-group-item">Data Structures and Algorithms</li>
+                    <li class="list-group-item">Web Engineering</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Artificial Intelligence</li>
+                    <li class="list-group-item">Human Computer Interaction</li>
+                    <li class="list-group-item">Computer Graphics</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Database Management Systems</li>
+                    <li class="list-group-item">Distributed Database Systems</li>
+                    <li class="list-group-item">Discrete Mathematics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="container py-4">
+        <h2 class="section-title">Reviews From my Teachers</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="card-body">
+                        <p class="card-text">"John doe was a brilliant student; always stood out with his assignments."</p>
+                        <p class="review-author mb-0">Jane Doe</p>
+                        <small class="review-author">Assistant Professor</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="card-body">
+                        <p class="card-text">"John doe was a brilliant student; always stood out with his assignments."</p>
+                        <p class="review-author mb-0">Jane Doe</p>
+                        <small class="review-author">Assistant Professor</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="card-body">
+                        <p class="card-text">"John doe was a brilliant student; always stood out with his assignments."</p>
+                        <p class="review-author mb-0">Jane Doe</p>
+                        <small class="review-author">Assistant Professor</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="container py-4">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid py-4 mt-4 text-center border-top border-custom">
+        <p>&copy; all rights reserved 2025</p>
+    </footer>
+
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
+            const themeIcon = themeToggle.querySelector('i');
+            
+            // Check for saved theme preference or use system preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                htmlElement.setAttribute('data-bs-theme', savedTheme);
+                updateIcon(savedTheme);
+            } else {
+                // Check for system preference
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                htmlElement.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
+                updateIcon(prefersDark ? 'dark' : 'light');
+            }
+            
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = htmlElement.getAttribute('data-bs-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                htmlElement.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateIcon(newTheme);
+            });
+            
+            // Update icon based on current theme
+            function updateIcon(theme) {
+                if (theme === 'dark') {
+                    themeIcon.classList.remove('bi-moon-fill');
+                    themeIcon.classList.add('bi-sun-fill');
+                } else {
+                    themeIcon.classList.remove('bi-sun-fill');
+                    themeIcon.classList.add('bi-moon-fill');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

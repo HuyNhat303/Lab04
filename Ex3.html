@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        /* Layout containers */
+        .logo {
+            width: 30px;
+            height: 30px;
+            background-color: #000;
+            margin-right: 10px;
+        }
+        
+        header {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+        
+        section {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav li {
+            margin-right: 10px;
+        }
+        
+        footer {
+            padding: 15px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        /* Review styling */
+        .review {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .author, .position {
+            color: #777;
+            font-size: 0.9em;
+        }
+        
+        /* Desktop specific styles */
+        .desktop-view {
+            display: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .desktop-view .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .desktop-view .title {
+            padding: 30px 15px;
+        }
+        
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .grid-item {
+            flex: 1;
+            min-width: 250px;
+            border: 1px solid #ddd;
+        }
+        
+        .reviews-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        
+        .reviews-container .review {
+            width: 30%;
+        }
+        
+        /* Mobile specific styles */
+        .mobile-view {
+            display: block;
+            max-width: 480px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+        
+        .mobile-view section {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Education section styling */
+        .education ul li {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        /* Media queries for responsive design */
+        @media screen and (min-width: 769px) {
+            .mobile-view {
+                display: none;
+            }
+            .desktop-view {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile View -->
+    <div class="mobile-view">
+        <header>
+            <div class="logo-container">
+                <div class="logo"></div>
+                <h2>your name</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a> /</li>
+                    <li><a href="#projects">Projects</a> /</li>
+                    <li><a href="#articles">Articles</a> /</li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="title">
+                <h1>Frontend Developer</h1>
+                <p>html only with proper layout, no styling</p>
+            </div>
+        </header>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>HTML Only Portfolio</li>
+                <li>Calculator</li>
+                <li>Quiz App</li>
+                <li>Countdown Timer</li>
+                <li>Product Upcoming Page</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>roadmap.sh</h3>
+                <p>Solved all the frontend projects</p>
+                <a href="#">Visit my Profile</a>
+            </div>
+        </section>
+
+        <section id="opensource">
+            <h2>OpenSource Work</h2>
+            <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+            <a href="#">Visit my GitHub Profile</a>
+        </section>
+
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+            <h3>Courses I took:</h3>
+            <ul>
+                <li>Object Oriented Programming</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Web Engineering</li>
+                <li>Artificial Intelligence</li>
+                <li>Human Computer Interaction</li>
+                <li>Computer Graphics</li>
+                <li>Database Management Systems</li>
+                <li>Distributed Database Systems</li>
+                <li>Discreet Mathematics</li>
+            </ul>
+        </section>
+
+        <section id="reviews">
+            <h2>Reviews From my Teachers</h2>
+            <div class="review">
+                <p>"John doe was a brilliant student; always stood out with his assignments."</p>
+                <p class="author">Jane Doe</p>
+                <p class="position">Assistant Professor</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; all rights reserved 2025</p>
+        </footer>
+    </div>
+
+    <!-- Desktop View -->
+    <div class="desktop-view">
+        <header>
+            <div class="top-bar">
+                <div class="logo-container">
+                    <div class="logo"></div>
+                    <h2>your name</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a> /</li>
+                        <li><a href="#projects">Projects</a> /</li>
+                        <li><a href="#articles">Articles</a> /</li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="title">
+                <h1>Frontend Developer</h1>
+                <p>html only with proper layout, no styling</p>
+            </div>
+        </header>
+
+        <main class="content-grid">
+            <section id="projects-section" class="grid-item">
+                <h2>Projects</h2>
+                <ul>
+                    <li>HTML Only Portfolio</li>
+                    <li>Calculator</li>
+                    <li>Quiz App</li>
+                    <li>Countdown Timer</li>
+                    <li>Product Upcoming Page</li>
+                </ul>
+            </section>
+
+            <section id="experience-section" class="grid-item">
+                <h2>Work Experience</h2>
+                <div class="job">
+                    <h3>roadmap.sh</h3>
+                    <p>Solved all the frontend projects</p>
+                    <a href="#">Visit my Profile</a>
+                </div>
+                
+                <div class="opensource">
+                    <h3>OpenSource Work</h3>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                    <a href="#">Visit my GitHub Profile</a>
+                </div>
+            </section>
+
+            <section id="education-section" class="grid-item education">
+                <h2>Education</h2>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+                <h3>Courses I took:</h3>
+                <ul>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </section>
+        </main>
+
+        <section id="reviews-section">
+            <h2>Reviews From my Teachers</h2>
+            <div class="reviews-container">
+                <div class="review">
+                    <p>"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="author">Jane Doe</p>
+                    <p class="position">Assistant Professor</p>
+                </div>
+                <div class="review">
+                    <p>"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="author">Jane Doe</p>
+                    <p class="position">Assistant Professor</p>
+                </div>
+                <div class="review">
+                    <p>"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="author">Jane Doe</p>
+                    <p class="position">Assistant Professor</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; all rights reserved 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
